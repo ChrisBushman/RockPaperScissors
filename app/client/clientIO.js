@@ -1,5 +1,6 @@
 // Our socket.io client object
 var client = {};
+// URL of socket is entered here. Kept blank in repo.
 client.socket = io.connect();
 
 // Client is looking for a game to join
