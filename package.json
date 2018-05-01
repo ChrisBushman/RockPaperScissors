@@ -1,5 +1,5 @@
 {
-  "name": "cardgamemanagerservice",
+  "name": "rockpaperscissors",
   "version": "1.0.0",
   "description": "This is a Node service that manages a board of cards for a TCG and hands that connect to the service",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisBushman/cardGameManagerService.git"
+    "url": "git+https://github.com/ChrisBushman/RockPaperScissors.git"
   },
   "author": "ChrisBushman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ChrisBushman/cardGameManagerService/issues"
+    "url": "https://github.com/ChrisBushman/RockPaperScissors/issues"
   },
-  "homepage": "https://github.com/ChrisBushman/cardGameManagerService#readme",
+  "homepage": "https://github.com/ChrisBushman/RockPaperScissors#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
