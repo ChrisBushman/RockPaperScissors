@@ -1,0 +1,28 @@
+{
+  "name": "cardgamemanagerservice",
+  "version": "1.0.0",
+  "description": "This is a Node service that manages a board of cards for a TCG and hands that connect to the service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisBushman/cardGameManagerService.git"
+  },
+  "author": "ChrisBushman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisBushman/cardGameManagerService/issues"
+  },
+  "homepage": "https://github.com/ChrisBushman/cardGameManagerService#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
