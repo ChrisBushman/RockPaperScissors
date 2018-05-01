@@ -1,16 +1,15 @@
-var tie_match = function(game) {
-  
-};
+// State: The result of the match was a tie!
+var tie_match = (game) => {};
 
 var tieResultText, playAgainButton, quitButton;
 
 tie_match.prototype = {
-    preload: function() {
+    preload: () => {
         game.load.image('playAgain', 'assets/PlayAgainButton.png');
         game.load.image('quit', 'assets/QuitButton.png');
     },
 
-    create: function() {
+    create: () => {
         tieResultText = game.add.text(game.world.centerX, game.world.height * 0.2, "You Tied!", instructionsStyle);
         tieResultText.anchor.set(0.5, 0.5);
 
@@ -23,9 +22,11 @@ tie_match.prototype = {
                                           }, this);
         playAgainButton.tint = 0.5 * 0xffffff;
         playAgainButton.anchor.set(0.5, 0.5);
+
         playAgainButton.onInputOver.add(() => {
             playAgainButton.tint = 0.8 * 0xffffff;
         }, this);
+
         playAgainButton.onInputOut.add(() => {
             playAgainButton.tint = 0.5 * 0xffffff;
         }, this);
@@ -39,9 +40,11 @@ tie_match.prototype = {
                                      }, this);
         quitButton.tint = 0.5 * 0xffffff;
         quitButton.anchor.set(0.5, 0.5);
+
         quitButton.onInputOver.add(() => {
             quitButton.tint = 0.8 * 0xffffff;
         }, this);
+
         quitButton.onInputOut.add(() => {
             quitButton.tint = 0.5 * 0xffffff;
         }, this);

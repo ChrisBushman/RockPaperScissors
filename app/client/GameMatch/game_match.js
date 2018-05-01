@@ -1,16 +1,15 @@
-var game_match = function(game) {
-  
-};
+// State: The player is in an arranged match with another player. 
+var game_match = (game) => {};
 
 var selectionText, rockButton, paperButton, scissorsButton;
 
 game_match.prototype = {
-    preload: function() {
+    preload: () => {
         game.load.image('Rock', 'assets/RockButton.png');
         game.load.image('Paper', 'assets/PaperButton.png');
         game.load.image('Scissors', 'assets/ScissorsButton.png');
     },
-    create: function() {
+    create: () => {
         selectionText = game.add.text(game.world.centerX, game.world.height * 0.2, "Select Your Weapon!", instructionsStyle);
         selectionText.anchor.set(0.5, 0.5);
 
@@ -23,9 +22,11 @@ game_match.prototype = {
                                      }, this);
         rockButton.tint = 0.5 * 0xffffff;
         rockButton.anchor.set(0.5, 0.5);
+
         rockButton.onInputOver.add(() => {
             rockButton.tint = 0.8 * 0xffffff;
         }, this);
+
         rockButton.onInputOut.add(() => {
             rockButton.tint = 0.5 * 0xffffff;
         }, this);
@@ -39,9 +40,11 @@ game_match.prototype = {
                                      }, this);
         paperButton.tint = 0.5 * 0xffffff;
         paperButton.anchor.set(0.5, 0.5);
+
         paperButton.onInputOver.add(() => {
             paperButton.tint = 0.8 * 0xffffff;
         }, this);
+
         paperButton.onInputOut.add(() => {
             paperButton.tint = 0.5 * 0xffffff;
         }, this);
@@ -55,12 +58,13 @@ game_match.prototype = {
                                          }, this);
         scissorsButton.tint = 0.5 * 0xffffff;
         scissorsButton.anchor.set(0.5, 0.5);
+
         scissorsButton.onInputOver.add(() => {
             scissorsButton.tint = 0.8 * 0xffffff;
         }, this);
+
         scissorsButton.onInputOut.add(() => {
             scissorsButton.tint = 0.5 * 0xffffff;
         }, this);
-        
     }
 };

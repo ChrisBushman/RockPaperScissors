@@ -1,16 +1,15 @@
-var win_match = function(game) {
-  
-};
+// State: The player has won the match
+var win_match = (game) => {};
 
 var winResultText, playAgainButton, quitButton;
 
 win_match.prototype = {
-    preload: function() {
+    preload: () => {
         game.load.image('playAgain', 'assets/PlayAgainButton.png');
         game.load.image('quit', 'assets/QuitButton.png');
     },
 
-    create: function() {
+    create: () => {
         winResultText = game.add.text(game.world.centerX, game.world.height * 0.2, "You Won!", instructionsStyle);
         winResultText.anchor.set(0.5, 0.5);
 
@@ -23,9 +22,11 @@ win_match.prototype = {
                                           }, this);
         playAgainButton.tint = 0.5 * 0xffffff;
         playAgainButton.anchor.set(0.5, 0.5);
+
         playAgainButton.onInputOver.add(() => {
             playAgainButton.tint = 0.8 * 0xffffff;
         }, this);
+
         playAgainButton.onInputOut.add(() => {
             playAgainButton.tint = 0.5 * 0xffffff;
         }, this);

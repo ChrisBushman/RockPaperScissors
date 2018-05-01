@@ -1,15 +1,14 @@
-var end_match = function(game) {
-  
-};
+// State: A player has ended the match.
+var end_match = (game) => {};
 
 var endMatchText, titleButton;
 
 end_match.prototype = {
-    preload: function() {
+    preload: () => {
         game.load.image('ReturnToTitle', 'assets/ReturnToTitleButton.png');
     },
 
-    create: function() {
+    create: () => {
         endMatchText = game.add.text(game.world.centerX, game.world.height * 0.2, "The match has ended!", instructionsStyle);
         endMatchText.anchor.set(0.5, 0.5);
 
@@ -22,9 +21,11 @@ end_match.prototype = {
                                       }, this);
         titleButton.tint = 0.5 * 0xffffff;
         titleButton.anchor.set(0.5, 0.5);
+
         titleButton.onInputOver.add(() => {
             titleButton.tint = 0.8 * 0xffffff;
         }, this);
+        
         titleButton.onInputOut.add(() => {
             titleButton.tint = 0.5 * 0xffffff;
         }, this);
