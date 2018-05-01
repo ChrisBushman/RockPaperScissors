@@ -1,5 +1,5 @@
 // State: The main title/menu of the game
-var title = (game) => {};
+var title = function(game) {};
 
 var titleText, joinGameButton;
 

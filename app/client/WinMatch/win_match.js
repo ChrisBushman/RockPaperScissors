@@ -1,5 +1,5 @@
 // State: The player has won the match
-var win_match = (game) => {};
+var win_match = function(game) {};
 
 var winResultText, playAgainButton, quitButton;
 

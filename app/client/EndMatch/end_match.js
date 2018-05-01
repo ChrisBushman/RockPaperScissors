@@ -1,5 +1,5 @@
 // State: A player has ended the match.
-var end_match = (game) => {};
+var end_match = function(game) {};
 
 var endMatchText, titleButton;
 

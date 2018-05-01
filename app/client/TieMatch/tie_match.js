@@ -1,5 +1,5 @@
 // State: The result of the match was a tie!
-var tie_match = (game) => {};
+var tie_match = function(game) {};
 
 var tieResultText, playAgainButton, quitButton;
 

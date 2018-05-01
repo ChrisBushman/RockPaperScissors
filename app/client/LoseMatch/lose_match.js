@@ -1,5 +1,5 @@
 // State: The player has lost the match.
-var lose_match = (game) => {};
+var lose_match = function(game) {};
 
 var loseResultText, playAgainButton, quitButton;
 

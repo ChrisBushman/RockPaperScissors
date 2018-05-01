@@ -1,6 +1,6 @@
 // State: The player has told the server he/she wants to play in a match. The player now waits
 //        for an opponent.
-var seek_game = (game) => {};
+var seek_game = function(game) {};
 
 var waitText;
 

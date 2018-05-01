@@ -1,6 +1,6 @@
 // State: The player has submitted their choice of Rock, Paper, or Scissors.
 //        Now the player waits for the server's result
-var wait_for_result = (game) => {};
+var wait_for_result = function(game) {};
 
 var waitForResultText;
 

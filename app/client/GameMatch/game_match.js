@@ -1,5 +1,5 @@
 // State: The player is in an arranged match with another player. 
-var game_match = (game) => {};
+var game_match = function(game) {};
 
 var selectionText, rockButton, paperButton, scissorsButton;
 

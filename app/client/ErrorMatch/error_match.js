@@ -1,6 +1,6 @@
 // State: An undefined result of the match has been returned. We handle that state here.
 //        Note: We should never see this state.
-var error_match = (game) => {};
+var error_match = function(game) {};
 
 var errorResultText, playAgainButton, quitButton;
 
