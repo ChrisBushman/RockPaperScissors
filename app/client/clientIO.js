@@ -1,7 +1,6 @@
 // Our socket.io client object
 var client = {};
-// Address currently hard-coded to container running server. Need to break out into config
-client.socket = io.connect("http://ANET_CodeSample-christopherwbushman33830.codeanyapp.com:8081");
+client.socket = io.connect();
 
 // Client is looking for a game to join
 client.seekingGame = () => {
