@@ -24,7 +24,7 @@ Secondly, install the node dependencies
 ```
 npm install
 ```
-Next, configure your client socket to connect to the server (app/client/clienIO.js: Line 4).
+Next, configure your client socket to connect to the server (app/client/clientIO.js: Line 4).
 
 ```
 client.socket = io.connect("<Your Server Hostname>:8081");
