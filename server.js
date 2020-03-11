@@ -43,6 +43,9 @@ io.on('connection', (socket) => {
         }
       
         // Reset the opponent of a player
+        socket.player.opponent = "";
+
+        // Look for a player in the player pool
         var player2 =  server.seekingPlayers.pop();
 
         // In case multiple players are added before a pairing check occurs, we look to seek if the player pool is empty and if a 2nd player currently exists
