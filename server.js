@@ -52,7 +52,7 @@ io.on('connection', (socket) => {
         var player2 =  server.seekingPlayers.pop();
         console.log("player pool is now: " + server.seekingPlayers);
         // In case multiple players are added before a pairing check occurs, we look to seek if the player pool is empty and if a 2nd player currently exists
-        if (!isDefined(player2)) {
+        if (typeof player2 !== 'undefined') {
             console.log("No players in the pool. Push to player pool");
             server.seekingPlayers.push(socket);
             console.log("Player added to pool. It looks like: " + server.seekingPlayers);
