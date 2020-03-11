@@ -34,12 +34,6 @@ server.listen(port, () => {
 io.on('connection', (socket) => {
     // Register players looking to join a game. If a pair of players is available, put them in a match
     socket.on('seekingGame', () => {
-        // Immediately check for a second player. If one does not exist, we will add current player to player pool
-        var player2 = undefined;
-        if (server.seekingPlayers.length > 0) {
-            player2 = server.seekingPlayers.pop();
-        }
-
         if (socket.player === undefined) {
             socket.player = {
                 id: server.lastPlayerID++,
@@ -49,10 +43,10 @@ io.on('connection', (socket) => {
         }
       
         // Reset the opponent of a player
-        socket.player.opponent = "";
+        var player2 =  server.seekingPlayers.pop();
 
         // In case multiple players are added before a pairing check occurs, we look to seek if the player pool is empty and if a 2nd player currently exists
-        if (server.seekingPlayers.length < 1 || player2) {
+        if (!isDefined(player2)) {
             server.seekingPlayers.push(socket);
         }
 
