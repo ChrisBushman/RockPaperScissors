@@ -1,7 +1,7 @@
 {
   "name": "rockpaperscissors",
   "version": "1.0.0",
-  "description": "This is a Node service that manages a board of cards for a TCG and hands that connect to the service",
+  "description": "This is a Node service that manages multiplayer sessions of ROCK! PAPER! SCISSORS!",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
